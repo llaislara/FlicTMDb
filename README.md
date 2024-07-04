@@ -8,7 +8,7 @@ Flic is a movie and series application that allows users to explore a vast catal
 
 ## Demo
 
-Check out the demo [here](#).
+Check out the demo [here](https://flic-lais-projects-d195e688.vercel.app/).
 
 ## Features
 
@@ -53,27 +53,6 @@ To run the project locally, follow the steps below:
    ```bash
    npm start
     ```
-
-
-## Folder Structure
-
-public/
-│
-├── fonts/          # Custom fonts used in the project
-└── images/         # Images for assets like not found pages
-
-src/
-│
-├── assets/         # Static files such as images and icons
-├── components/     # Reusable components
-├── hooks/          # Custom hooks
-├── pages/          # Application pages
-├── redux/          # Redux store and slices
-├── utils/          # Utility functions
-├── App.jsx         # Root component of the application
-├── main.jsx        # Main entry point for the application
-└── ScrollToTop.jsx # Component to handle automatic scroll to top on route change
-└── .env            # Environment variables
 
 ## Contribution
 If you want to contribute to the project, follow these steps:
