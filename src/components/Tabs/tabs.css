@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'Utendo-Medium';
+    src: url('../../../public/fonts/Utendo-Medium.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  
+.tabs {
+    font-family: "Utendo-Medium", sans-serif;
+    font-weight: 600;
+    height: 34px;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 2px;
+}
+
+.tab-items {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.tab-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 100%;
+    color: var(--black);
+    font-size: var(--normal-fs);
+    z-index: 1;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.tab-active {
+    color: #1e1e1c;
+}
+
+.tab-bg {
+    position: absolute;
+    left: 0;
+    background-color: var(--yellow);
+    height: 30px;
+    width: 90px;
+    border-radius: 15px;
+    transition: left cubic-bezier(0.88, -0.35, 0.565, 1.35) 0.4s;
+}

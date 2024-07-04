@@ -1,0 +1,90 @@
+.movieCard {
+  width: 160px;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-bottom: 1rem;
+  position: relative; 
+}
+
+.movieCard .posterBlock {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1.5;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.movieCard .posterBlock .lazy-load-image-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.movieCard .posterBlock .circleRating {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: 60px;
+  right: 10px;
+  background-color: var(--white);
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.movieCard .posterBlock .genres {
+  display: none;
+  position: relative;
+}
+
+.movieCard .textBlock {
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  position: absolute; 
+  bottom: 0; 
+  left: 0;
+  right: 0; 
+  padding: 10px; 
+  background: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.601) 80%, transparent 100%); 
+  backdrop-filter: blur(5px);
+  z-index: 1; 
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px; 
+  height:27%;
+}
+
+.movieCard .textBlock .title {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: var(--normal-fs);
+  margin-bottom: 0.25rem;
+}
+
+.movieCard .textBlock .date {
+  font-size: var(--small-fs);
+  font-weight: var(--medium-fw);
+}
+
+@media only screen and (max-width: 320px) {
+  .movieCard {
+      width: 200px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .movieCard {
+      width: 170px;
+  }
+}

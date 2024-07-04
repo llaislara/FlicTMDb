@@ -1,0 +1,248 @@
+@font-face {
+    font-family: 'Utendo-Medium';
+    src: url('../../../public/fonts/Utendo-Medium.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: var(--z-fixed);
+    transition: var(--transition);
+}
+
+.nav {
+    height: calc(var(--header-height) + 0.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-container-itens{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    background: var(--black);
+    width: 40%;
+    height: 35px;
+    border-radius: 33px;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.nav-logo,
+.nav-toggle,
+.nav-close {
+    color: var(--white);
+    font-weight: var(--bold-fw);
+}
+
+.nav-toggle,
+.nav-close {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-logo {
+    font-family: "Utendo-Medium", sans-serif;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: var(--h3-fs);
+    column-gap: 0.25rem;
+}
+
+.nav-logo-img img {
+    transform: scale(0.5) !important;
+}
+
+.nav-contact {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    
+}
+
+.nav-contact svg{
+    color: var(--white);
+    transition: 0.5s;
+}
+
+.nav-contact svg:hover{
+    transform: scale(1.1);
+}
+
+.nav-toggle {
+    display: inline-flex;
+}
+
+.search-input {
+    color: var(--black);
+    font-weight: var(--bold-fw);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.searchbar-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.header-search-input {
+    border: 1px solid var(--gray);
+}
+
+.search-icon{
+    background-color: var(--black);
+    width: 40px;
+    height: 30px;
+    padding: 3px;
+    border-radius: 20px;
+}
+.search-close {
+    color: var(--white);
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.search-close:hover {
+    transform: rotate(180deg);
+}
+
+.header-button-search{
+    display: none;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 3rem;
+    padding-top: 9rem;
+}
+
+.nav-link {
+    color: var(--white);
+    font-weight: var(--bold-fw);
+    font-size: var(--h1-fs);
+    text-transform: uppercase;
+    transition: var(--transition-4);
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    transform: scale(1.05);
+    color: var(--yellow);
+}
+
+.nav-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.activeMenu {
+    right: 0;
+}
+
+.scroll-header {
+    background-color: var(--black);
+    box-shadow: 0 0 10px 10px hsla(0, 0%, 0%, 0.281);
+}
+
+
+@media screen and (max-width: 968px) {
+    .nav-menu {
+        position: fixed;
+        background-color: var(--black);
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        transition: var(--transition-4);
+        z-index: 999;
+    }
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 3rem;
+    padding-top: 9rem;
+}
+
+.nav-link {
+    color: var(--white);
+    font-weight: var(--bold-fw);
+    font-size: var(--h1-fs);
+    text-transform: uppercase;
+    transition: var(--transition-4);
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: var(--gray);
+}
+
+.nav-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.activeMenu {
+    right: 0;
+}
+
+.scroll-header {
+    background-color: var(--black);
+    box-shadow: 0 1px 4px hsla(0, 4%, 15%, .10);
+}
+  
+
+@media screen and (min-width: 768px) {
+    .nav {
+        height: calc(var(--header-height) + 2.5rem);
+    }
+    
+    .nav-logo-img {
+        width: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 968px) {
+    .nav {
+        justify-content: initial;
+        column-gap: 2rem;
+    }
+    
+    .nav-close,
+    .nav-toggle {
+        display: none;
+    }
+    
+    
+    .nav-list {
+        padding-top: 0;
+        flex-direction: row;
+        column-gap: 2rem;
+    }
+    
+    .nav-link {
+        font-size: var(--normal-fs);
+        text-transform: capitalize;
+    }
+    
+    .nav-contact {
+        margin-left: auto;
+        gap: 15px;
+    }
+}
